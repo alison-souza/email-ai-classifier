@@ -1,4 +1,6 @@
+// script.js
 const MAX_CHARS = 5000;
+const BACKEND_URL = "https://email-ai-classifier-q6mq.onrender.com"; // <-- altere para sua URL do Render
 
 const form = document.getElementById("emailForm");
 const emailText = document.getElementById("emailText");
@@ -87,7 +89,8 @@ form.onsubmit = async (e) => {
   if (file) formData.append("file", file);
 
   try {
-    const res = await fetch("http://127.0.0.1:5000/process", {
+    const res = await fetch(`${BACKEND_URL}/process`, {
+      // <-- mudou aqui
       method: "POST",
       body: formData,
     });
