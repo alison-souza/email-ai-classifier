@@ -1,0 +1,15 @@
+# Crie o .gitignore antes de adicionar arquivos
+notepad .gitignore
+# Cole:
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
