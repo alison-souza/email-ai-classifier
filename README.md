@@ -5,9 +5,9 @@
 
 ## 💻 Preview
 
-![Preview do Email AI Classifier](assets/preview1.png)
-![Preview do Email AI Classifier](assets/preview2.png)
-![Preview do Email AI Classifier](assets/preview3.png)
+![Preview do Email AI Classifier](./frontend/assets/preview_1.png)
+![Preview do Email AI Classifier](./frontend/assets/preview_2.png)
+![Preview do Email AI Classifier](./frontend/assets/preview_3.png)
 
 O **Email AI Classifier** é uma aplicação web que utiliza Inteligência Artificial para **classificar automaticamente emails corporativos e sugerir respostas inteligentes**.
 
