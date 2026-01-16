@@ -1,4 +1,4 @@
-# 🤖 CVBoosterAI – Analisador Inteligente de Currículos com IA
+# 🤖 Email AI Classifier – Classificação e Resposta Automática de Emails com IA
 
 ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
