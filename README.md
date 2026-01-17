@@ -145,7 +145,7 @@ http://localhost:8000
 ## 🌐 Links do Projeto
 
 - **Repositório no GitHub:** https://github.com/alison-souza/email-ai-classifier
-- **Vídeo Demonstrativo:** #LINK AQUI
+- **Vídeo Demonstrativo:** https://youtu.be/OD42XeE3BVI
 - **Aplicação Hospedada:** https://email-ai-classifier-frontend.onrender.com/
 
 ---
