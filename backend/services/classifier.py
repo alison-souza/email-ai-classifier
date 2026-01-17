@@ -1,4 +1,3 @@
-# services/classifier.py
 from services.openai_client import client
 
 def classify_email(text: str) -> str:
@@ -26,6 +25,6 @@ Email:
 
     category = response.choices[0].message.content.strip().capitalize()
     if category not in ["Produtivo", "Improdutivo"]:
-        category = "Improdutivo"  # fallback seguro
+        category = "Improdutivo"
 
     return category

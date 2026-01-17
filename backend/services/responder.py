@@ -1,4 +1,3 @@
-# services/responder.py
 from services.openai_client import client
 
 def generate_response(text: str, category: str) -> str:

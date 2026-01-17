@@ -1,4 +1,3 @@
-// script.js
 const MAX_CHARS = 5000;
 const BACKEND_URL = "https://email-ai-classifier-j9l9.onrender.com/"; // <-- altere para sua URL do Render
 

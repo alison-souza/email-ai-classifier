@@ -1,4 +1,3 @@
-# app.py
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,7 +13,7 @@ CORS(app)
 
 @app.route("/process", methods=["POST"])
 def process_email():
-    # aceita JSON ou form-data
+
     if request.is_json:
         text = request.json.get("text", "").strip()
     else:
@@ -42,5 +41,5 @@ def process_email():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5000))  # porta dinâmica
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
