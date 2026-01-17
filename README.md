@@ -158,7 +158,3 @@ http://localhost:8000
 - Notificações e alertas para emails críticos
 
 #### ⭐ Se este projeto chamou sua atenção, deixe uma estrela no repositório!
-
-```
-
-```
