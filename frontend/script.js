@@ -1,5 +1,5 @@
 const MAX_CHARS = 5000;
-const BACKEND_URL = "https://email-ai-classifier-j9l9.onrender.com/"; // <-- altere para sua URL do Render
+const BACKEND_URL = "https://email-ai-classifier-j9l9.onrender.com/";
 
 const form = document.getElementById("emailForm");
 const emailText = document.getElementById("emailText");
@@ -88,13 +88,10 @@ form.onsubmit = async (e) => {
   if (file) formData.append("file", file);
 
   try {
-    const res = await fetch(
-      "https://email-ai-classifier-j9l9.onrender.com/process",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+    const res = await fetch(`${BACKEND_URL}/process`, {
+      method: "POST",
+      body: formData,
+    });
 
     const data = await res.json();
     const end = performance.now();
@@ -109,6 +106,8 @@ form.onsubmit = async (e) => {
     loadHistory();
 
     result.classList.remove("hidden");
+    resetUploadArea();
+    emailText.value = "";
   } catch (err) {
     showFormError("Erro ao processar o email. Tente novamente.");
   } finally {
@@ -117,6 +116,18 @@ form.onsubmit = async (e) => {
     form.querySelector("button").disabled = false;
   }
 };
+
+function resetUploadArea() {
+  selectedFile = null;
+  fileInput.value = "";
+
+  dropZone.innerHTML = `
+    <p>
+      📁 Arraste um arquivo .txt ou .pdf aqui<br />
+      ou clique para selecionar
+    </p>
+  `;
+}
 
 /* =======================
    SANITIZAÇÃO
@@ -153,7 +164,10 @@ function loadHistory() {
       <strong class="${h.category.toLowerCase()}">${h.category}</strong>
       <small>${h.date}</small>
       <em>${h.email}</em>
-      <button class="remove-item">Remover</button>
+
+      <button class="remove-item icon-only" aria-label="Remover">
+      <span class="trash-icon">🗑</span>
+      </button>
     `;
 
     li.querySelector(".remove-item").onclick = () => {
@@ -171,7 +185,6 @@ function removeHistoryItem(id) {
   loadHistory();
 }
 
-/* Limpar tudo */
 clearHistoryBtn.onclick = () => {
   if (!confirm("Deseja realmente limpar todo o histórico?")) return;
   localStorage.removeItem("history");
